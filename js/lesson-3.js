@@ -8,6 +8,9 @@
 // const numbers = [[1, 2, 3, 4, 5]]
 
 // ~~
+// const numbers = [1, 2, 3, 4, 5];
+// const squares = numbers.map((num) => num ** 2);
+// console.log(squares); // [1, 4, 9, 16, 25]
 
 // ------------------------------------------------------------------------------------------------
 // Завдання 2:
@@ -23,6 +26,13 @@
 // ];
 
 // ~~
+// const data = [
+//   { id: 1, values: [1, 2, 3] },
+//   { id: 2, values: [4, 5, 6] },
+//   { id: 3, values: [7, 8, 9] }
+// ];
+// const mergedValues = data.flatMap((obj) => obj.values);
+// console.log(mergedValues); // [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 // ------------------------------------------------------------------------------------------------
 // Завдання 3:
@@ -38,6 +48,13 @@
 // ];
 
 // ~~
+// const people = [
+//   { name: "John", age: 27 },
+//   { name: "Jane", age: 31 },
+//   { name: "Bob", age: 19 }
+// ];
+// const hasUnder20 = people.some((person) => person.age < 20);
+// console.log(hasUnder20); // true
 
 // ------------------------------------------------------------------------------------------------
 // Завдання 4:
@@ -48,6 +65,9 @@
 // const numbers = [2, 4, 6, 8, 10];
 
 // ~~
+// const numbers = [2, 4, 6, 8, 10];
+// const allEven = numbers.every((num) => num % 2 === 0)
+// console.log(allEven); // true
 
 // ------------------------------------------------------------------------------------------------
 // Завдання 5:
@@ -57,6 +77,9 @@
 // const numbers = [2, 1, 6, 8, 9, 10, 12];
 
 // ~~
+// const numbers3 = [2, 1, 6, 8, 9, 10, 12];
+// const firstOdd = numbers3.find(num => num % 2 !== 0);
+// console.log(firstOdd); // 1
 
 //-------------------------------------------------------------------------------------------------
 // Завдання 6:
@@ -67,6 +90,9 @@
 // const numbersArray = [4, 2, 5, 1, 3];
 
 // ~~
+// const numbers = [4, 2, 5, 1, 3];
+// const sortedNumbers = numbers.toSorted((a, b) => a - b);
+// console.log(sortedNumbers); // [1, 2, 3, 4, 5]
 
 // ------------------------------------------------------------------------------------------------
 // Завдання 7:
@@ -78,6 +104,9 @@
 // const stringArray = ['banana', 'orange', 'apple', 'pear'];
 
 // ~~
+// const stringArray = ['banana', 'orange', 'apple', 'pear'];
+// const sortedStringArray = stringArray.toSorted();
+// console.log(sortedStringArray); // ["apple", "banana", "orange", "pear"]
 
 // ------------------------------------------------------------------------------------------------
 // Завдання 8:
@@ -92,6 +121,16 @@
 // ];
 
 // ~~
+// const users = [
+//   { name: 'John', age: 27 },
+//   { name: 'Jane', age: 31 },
+//   { name: 'Bob', age: 19 },
+// ];
+
+// const sortedUsers = users.toSorted((a, b) => a.age - b.age);
+
+// console.log(sortedUsers);
+// [{ name: 'Bob', age: 19 }, { name: 'John', age: 27 }, { name: 'Jane', age: 31 }]
 
 // ------------------------------------------------------------------------------------------------
 // Завдання 9:
@@ -108,6 +147,13 @@
 // ]
 
 // ~~
+// const user = [
+//  { name: 'John', age: 27 },
+//  { name: 'Jane', age: 31 },
+//  { name: 'Bob', age: 19 },
+// ]
+// const usersFiltered = user.filter((user) => user.age > 20);
+// console.log(usersFiltered); // [{name: "John", age: 27}, {name: "Jane", age: 31}]
 
 // ------------------------------------------------------------------------------------------------
 // Завдання 10:
@@ -118,6 +164,9 @@
 // const numbers = [1, 2, 3, 4, 5];
 
 // ~~
+// const numbers = [1, 2, 3, 4, 5];
+// const sum = numbers.reduce((acc, num) => acc + num, 0);
+// console.log(sum); // 15
 
 // ------------------------------------------------------------------------------------------------
 // Завдання 11:
@@ -129,6 +178,52 @@
 // Об'єкт класу може проводити послідовні операції у вигляді ланцюжка
 
 // ~~
+// class Calculator {
+//   constructor() {
+//     this.result = 0;
+//   }
+
+//   number(value) {
+//     this.result = value;
+//     return this;
+//   }
+
+//   add(value) {
+//     this.result += value;
+//     return this;
+//   }
+
+//   substruct(value) {
+//     this.result -= value;
+//     return this;
+//   }
+
+//   multiply(value) {
+//     this.result *= value;
+//     return this;
+//   }
+
+//   divide(value) {
+//     if (value !== 0) this.result /= value;
+//     return this;
+//   }
+
+//   getResult() {
+//     return this.result;
+//   }
+// }
+
+// const calc = new Calculator();
+
+// const result = calc
+//   .number(10)
+//   .add(5)
+//   .multiply(2)
+//   .substruct(3)
+//   .divide(2)
+//   .getResult();
+
+// console.log(result); // 13.5
 
 // ------------------------------------------------------------------------------------------------
 // Завдання 12:
@@ -160,3 +255,50 @@
 //  ##### Крім того, клас `Employee` має мати метод `getEmployeeDetails()`, який повертає об'єкт з ідентифікатором співробітника, зарплатою та відділом, в якому працює співробітник.
 
 // ~~
+// class Person {
+//   constructor(name, age, gender, email) {
+//     this.name = name;
+//     this.age = age;
+//     this.gender = gender;
+//     this.email = email;
+//   }
+
+//   getDetails() {
+//     return {
+//       name: this.name,
+//       age: this.age,
+//       gender: this.gender,
+//       email: this.email
+//     };
+//   }
+// }
+
+// class Employee extends Person {
+//   constructor(name, age, gender, email, salary, department) {
+//     super(name, age, gender, email);
+//     this.salary = salary;
+//     this.department = department;
+//   }
+
+//   getEmployeeDetails() {
+//     return {
+//       salary: this.salary,
+//       department: this.department
+//     };
+//   }
+// }
+
+// const person = new Person("John", 30, "Male", "john.doe@example.com");
+// console.log(person.getDetails());
+// // { name: 'John', age: 30, gender: 'Male', email: 'john@example.com' }
+
+// const employee = new Employee(
+//   "Jane",
+//   28,
+//   "Female",
+//   "jane.smith@example.com",
+//   50000,
+//   "Engineering"
+// );
+// console.log(employee.getEmployeeDetails());
+// // { salary: 50000, department: 'Engineering' }
